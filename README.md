@@ -8,8 +8,7 @@ Chatbot do pomiaru i poprawy NPS
 Przykład działania [systemu](https://www.qans.pl/services/test-bot/).
 
 
-Nasz krótki film który pokazuje przewagę systemu opartego o dialog nad ankietami
-
+Ten film pokazuje przewagę systemu opartego o dialog nad ankietami
 </div>
 
 [![](http://img.youtube.com/vi/Y9VOwpKLA58/0.jpg)](http://www.youtube.com/watch?v=Y9VOwpKLA58 "")
@@ -19,18 +18,17 @@ Nasz krótki film który pokazuje przewagę systemu opartego o dialog nad ankiet
 Jak użyć tego [systemu](https://www.qans.pl/services/) do poprawy NPS .
 
 
-Możesz dowolnie kopiować ten produkt i używać go (w tym w celach komercyjnych) bezpłatnie.
+Możesz dowolnie kopiować ten kod i używać go (w tym w celach komercyjnych) bezpłatnie.
 
 
 Ten system jest w trakcie aktywnego rozwoju.
 - do zrobienia, instrukcja instalacji
 - docker
 
-This system is based on [Rasa](https://github.com/RasaHQ/rasa), an open source machine learning framework to automate text-and voice-based conversations.
-You can learn more about Rasa and see details of the documentation.
+Ten system działa w oparciu o [Rasa](https://github.com/RasaHQ/rasa). 
 
 
-Rasa is an open source machine learning framework to automate text-and voice-based conversations. With Rasa, you can build contextual assistants on:
+Czatbot rasa może być używany w następujących kanałach:
 - Facebook Messenger
 - Slack
 - Google Hangouts
@@ -43,10 +41,5 @@ Rasa is an open source machine learning framework to automate text-and voice-bas
 - Własny kanał
 
 
-## License
-Licensed under the Apache License, Version 2.0.
-Copyright 2021 Rasa Technologies GmbH. [Copy of the license](LICENSE.txt).
-
-A list of the Licenses of the dependencies of the project can be found at
-the bottom of the
-[Libraries Summary](https://libraries.io/github/RasaHQ/rasa).
+## Licencja
+MIT. Licencja na ten model i kod do badania NPS. Rasa ma odrębną licencję opisaną w ich dokumentacji. 
