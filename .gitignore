@@ -1,0 +1,13 @@
+/rasa/
+/models/
+/results_spacy/
+/results_tf/
+/config_tf.yml
+/config_spacy.yml
+/actions/__pycache__/
+*.db*
+<<<<<<< HEAD
+.idea/
+=======
+.idea/
+>>>>>>> 9db10f31ebc535aab65f50299d583d362292ce51
