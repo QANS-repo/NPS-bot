@@ -1,0 +1,297 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- przywitaj
+- inform
+- affirm
+- deny
+- na_czym_to_polega
+- out_of_scope
+- covid
+- bot_challenge
+- pytanie_o_godziny
+- pytanie_o_lokalizacje
+- jedzenie
+- jakość_mebli
+- cena
+- design_produktów
+- asortyment
+- obsługa
+- pogorszenie
+- parking
+- zwrot
+- kolejki
+- powierzchnia_sklepu
+- za_dużo_chodzenia
+- rabaty_promocje
+- montaż
+- dostawa
+- reklamacje
+- miejsce_na_cały_dzień
+- dostępność_brak
+- tłok
+- ogólnie
+- udane_zakupy
+- wygoda
+entities:
+- product_type
+- food
+- transport
+- store_location
+- time
+- number
+- ikea_family
+slots:
+  assembly:
+    type: bool
+  delivery:
+    type: bool
+  food:
+    type: list
+  food_mentioned:
+    type: bool
+  had_problems_finding_product:
+    type: bool
+  ikea_family:
+    type: categorical
+    values:
+    - 'true'
+    - 'false'
+    - not_interested
+  is_crowded:
+    type: bool
+  missing_product_type:
+    type: list
+  nps_group:
+    type: categorical
+    values:
+    - detractor
+    - passive
+    - promotor
+  nps_score:
+    type: text
+  product_type:
+    type: text
+  requested_slot:
+    type: unfeaturized
+  store_location:
+    type: text
+  store_size:
+    type: text
+  transport:
+    type: list
+  transport_text:
+    type: text
+  walking_text:
+    type: text
+responses:
+  utter_badanie:
+  - text: Witaj 😎! Jestem robotem 🤖. Czy mogę Cię zapytać o doświadczenia dot. sklepu
+      Ikea?
+  - text: Witaj 😎! Jestem robotem 🤖. Czy możemy porozmawiać o Twoich doświadczeniach
+      związanych ze sklepem Ikea?
+  utter_badanie2:
+  - buttons:
+    - payload: /affirm
+      title: 👍 tak, pogadajmy
+    - payload: /deny
+      title: nie
+    - payload: /na_czym_to_polega
+      title: na czym to polega?
+    text: To nie jest ankieta. Mam dwa pytania, a potem porozmawiamy o tym co dla
+      Ciebie ważne kontekście oceny sklepu. Ułatwisz mi to zadanie, gdy będziesz odpowiadać
+      krótkimi zdaniami.
+  utter_goodbye:
+  - text: Dziękuję za rozmowę i pozostaję do dyspozycji.
+  - text: Dziękuję. 🤩 Twoje uwagi pomogą rozwinąć ofertę.
+  utter_ask_nps_score:
+  - text: Jak bardzo jesteś skłonny/a polecić IKEA znajomemu lub przyjacielowi? Podaj
+      liczbę między 0 a 10, gdzie 0 to 'wcale nie polecam' a 10 to 'bardzo polecam'.
+  utter_uzasadnienie:
+  - text: Dlaczego?✏️
+  - text: Jaki jest najważniejszy powód takiej oceny✏️
+  utter_instrukcja:
+  - text: Kiedyś nauczę się dawać rady, teraz uczę się rozmawiać..
+  - text: Kiedyś będę potrafił dawać rady 🧠, teraz potrafię zrozumieć.
+  utter_form_nps_uzasadnienie_detraktor:
+  - text: 😕 Dziękuję. Czy możesz krótko opisać jakie są główne powody Twojej oceny?
+      ✏️.
+  utter_form_nps_uzasadnienie_passive:
+  - text: Rozumiem. Jakie są główne powody Twojej oceny? ✏️.
+  - text: OK, jakie są główne powody takiej oceny? ✏️.
+  utter_form_nps_uzasadnienie_promotor:
+  - text: To bardzo miło 😍. Co najbardziej zasługuje na polecenie? ✏️
+  - text: Super. Co najbardziej zasługuje na polecenie? ✏️
+  utter_form_wrong_nps_score:
+  - text: Chwileczkę, to musi być liczba 🔢 między 0 (nie polecam) a 10 (bardzo polecam).
+  utter_ask_missing_product_type:
+  - text: Jakiego produktu nie mogłaś/eś znaleźć?
+  utter_ask_had_problems_finding_product:
+  - text: Nie mogłaś/eś czegoś znaleźć?
+  utter_planowanie_wizyty:
+  - buttons:
+    - payload: /affirm
+      title: 👍 tak, rady...🦉
+    - payload: /deny
+      title: nie
+    text: Czy chcesz zobaczyć kilka rad o planowaniu wizyty 👣? Np. użyj [listy zakupów](https://www.ikea.com/pl/pl/favourites/)
+      na stronie IKEA,  unikaj podążania za niebieskimi strzałkami, itp?
+  utter_tłok:
+  - text: Są pory i dni (jak sobota) których lepiej unikać. 🧑‍🤝‍🧑🧑🏿‍🤝‍🧑🏽🧑‍🤝‍🧑🧑‍🤝‍🧑.
+  utter_rady:
+  - text: Te i inne rady znajdziesz na tym blogu - [polskie tłumaczenie](https://translate.google.com/translate?sl=en&tl=pl&u=https%3A%2F%2Fwww.squawkfox.com%2Fikea%2F)
+      i [oryginał](https://www.squawkfox.com/ikea/). Co jeszcze przychodzi Ci do głowy
+      jak myślisz o sklepie Ikea? ✏️
+  utter_ogólnie_dlaczego:
+  - text: 😎 to super. Czy możesz się zastanowić co najbardziej Ci się podoba?
+  - text: ✏️ możesz to trochę rozwinąć? ✏️
+  - text: ✏️ Dlaczego? ✏️✏️✏️
+  utter_link:
+  - text: Chcesz się z nami skontaktować, napisz do nas [qans.spzoo@gmail.com](mailto:qans.spzoo@gmail.com)
+  utter_rozm_dostawa:
+  - text: 🚚 Zanotowałem Twoje uwagi na temat dostawy 🛻. Co jeszcze jest dla Ciebie
+      istotne?
+  utter_rozm_montaz:
+  - text: 🔧🔧 Zanotowałem Twoje uwagi na temat montażu. Nie wszystkie lokalizacje mają
+      w ofercie dostawę i montaż. Jest coś jeszcze czym możesz się podzielić?
+  utter_montaz:
+  - text: 🛠️ Meble są w częściach i wymagają składania ...
+  utter_ask_affirmation:
+  - text: Miałeś(aś) na myśli?
+  utter_godziny_otwarcia:
+  - text: Najlepiej sprawdzić w [wyszukiwarce] (https://www.google.com/search?q=ikea+godziny+otwarcia)
+  utter_lokalizacja:
+  - text: Tu lista [sklepów w okolicy] (https://www.google.com/search?q=ikea+lokalizacja)
+  utter_powrot:
+  - text: Czy masz jeszcze jakieś uwagi na temat sklepu?
+  utter_ask_rephrase:
+  - text: Czy możesz to opisać prościej? Ciągle się uczę.
+  utter_opis_ankiety:
+  - text: Najpierw zapytam czy jesteś zadowolony/a ze sklepu Ikea. Następnie postaram
+      się zrozumieć co w ofercie jest dla Ciebie cenne, a co Ci przeszkadza lub powinno
+      być poprawione. Następnie przeanalizuję wszystkie rozmowy i stworzę krótkie
+      podsumowanie. To podsumowanie może być inspiracją do poprawy oferty.
+  utter_opis_ankiety2:
+  - text: Na przykładzie Ikei do zademonstrowania swoich możliwości 🤖🤖🤖. Nie mam powiązania
+      z tym sklepem. Zostałem stworzony przez startup [QANS.pl](https://www.qans.pl).
+  utter_opis_ankiety3:
+  - text: Dziękuję, że ze mną rozmawiasz. Dzięki temu się uczę. Wszystko co piszesz
+      pomoże mi lepiej rozumieć 🤔. Jeśli będziesz chciał/a zacząć rozmowę od nowa
+      napisz /restart - zaczynając od ukośnika.
+  utter_pytanie_o_podsumowanie:
+  - buttons:
+    - payload: /affirm
+      title: 👍 tak
+    - payload: /deny
+      title: nie
+    text: Czy chcesz zobaczyć czego się do tej pory nauczyłem z naszej rozmowy?
+  utter_product_type:
+  - text: Jakie produkty Cię interesują?
+  utter_placeholder:
+  - text: 🔨 to jest coś czego jeszcze się uczę 🚧🚧 🛑 ✋ 🏗️ 🚚 💻
+  utter_ask_food:
+  - text: Czy możesz wymienić jakieś konkretne potrawy?
+  - text: Jakieś potrawy przychodzą Ci na myśl 🥪 ☕ 🥤 ?
+  utter_form_food_submitted:
+  - text: Dziękuję za Twoje uwagi o restauracji. 🧂☕🧆.
+  - text: Jestem robotem 🦿 więc nie jadam i nie piję kawy 🧂☕🧆 ale Twoje uwagi są bardzo
+      pomocne.
+  utter_food_form_submitted_links:
+  - text: Więcej o [restauracji](https://www.ikea.com/pl/pl/stores/restaurant/) oraz
+      [przepisy](https://www.ikea.com/pl/pl/ideas/tags/gotowanie-pubd14c90b8)
+  utter_kontynuacja:
+  - text: Jest coś jeszcze czym możesz się podzielić? 🏆
+  - text: Dziękuję. Co jeszcze przychodzi Ci na myśl?
+  utter_form_parking_submitted:
+  - text: Zapewnienie łatwych i ekologicznych sposobów transportu jest ważne. 🔌 🔋
+      🚌 🚗 🚶‍
+  utter_bot_challenge:
+  - text: Jestem systemem AI, rodzajem robota 🤖. Zbudowano mnie abym zrozumiał co
+      jest dla Ciebie ważne w ofercie.
+  - text: Jestem robotem 🤖 . Nauczono mnie rozmawiać abym zrozumiał Twoje uwagi i
+      zebrał informacje o tym co jest dla Ciebie ważne.
+  utter_co_sie_pogorszyło:
+  - text: Co się zmieniło? Czy możesz to opisać 📖?
+  utter_covid:
+  - text: Mówisz o wirusie 😷. Nie jestem przygotowany na tą rozmowę. 😉
+  utter_ask_product_type:
+  - text: Czy są jakieś produkty, które szczególnie chcesz podkreślić?
+  - text: Jakieś produkty, warte podkreślenia?
+  utter_ask_product_quality:
+  - text: Co myślisz o jakości?
+  utter_ask_product_price:
+  - text: Co myślisz o cenach 🏷️ ?
+  utter_ask_product_design:
+  - text: Jak Ci się podoba design produktów?
+  utter_ask_product_comment:
+  - text: Jeśli masz jakieś komentarze na temat produktów to chętnie ich posłucham.
+      🔖 ✏️
+  utter_form_product:
+  - text: Dziękuję za te uwagi na temat produktów 🛋️ 🪑.
+  utter_katalog:
+  - text: Tu znajdziesz najnowszy [katalog](https://publications-pl-pl.ikea.com/ikea_catalogue/page/1)
+      📓. Masz jeszcze jakieś komentarze?
+  utter_obsługa:
+  - text: Rozumiem 🛒. Jakie masz jeszcze uwagi na temat Twoich doświadczeń?
+  utter_zwrot:
+  - text: 🚛. Jakie masz jeszcze uwagi?
+  utter_promocje:
+  - buttons:
+    - payload: /inform{"ikea_family":"true"}
+      title: 🛍️ 💳 Już mam 💳
+    - payload: /inform{"ikea_family":"false"}
+      title: Jeszcze nie mam karty 💳 🏬
+    - payload: /inform{"ikea_family":"not_interested"}
+      title: Nie interesuje mnie 🚫.
+    text: 😁. Dzięki. Jeśli jeszcze nie jesteś klubowiczem rozważ zapisanie się do
+      [Ikea family](https://www.ikea.com/pl/pl/profile/signup/). Jest bezpłatne i
+      oferuje dostęp do wielu promocji.
+  utter_form_missing_product:
+  - text: Wszystkie poszukiwane produkty powinny być łatwo dostępne. Czy chcesz teraz
+      poszukać tego w katalogu 🔎?
+  utter_ask_store_location:
+  - text: Który sklep masz na myśli? 🏬. Możesz podać miasto lub ulicę.
+  utter_form_store:
+  - text: Dziękuje. Jakie masz jeszcze uwagi?  ✏️ 🔖
+  utter_ask_delivery:
+  - buttons:
+    - payload: /inform{"delivery":"True"}
+      title: Tak 🚚
+    - payload: /inform{"delivery":"False"}
+      title: Nie 🚫
+    text: Czy zamawiałaś/eś dostawę? 🐫
+  utter_ask_assembly:
+  - buttons:
+    - payload: /inform{"assembly":"True"}
+      title: Tak 🔩
+    - payload: /inform{"assembly":"False"}
+      title: Nie 📖
+    text: Czy zamawiałaś/eś montaż? 🔧🔧
+  utter_default:
+  - text: 🔨 to jest coś czego jeszcze się uczę 🚧🚧 🛑 ✋ 🏗️ 🚚 💻. Czy możesz to napisać
+      inaczej?
+actions:
+- action_set_product_return
+- action_set_assortment
+- action_set_checkout_lines
+- action_set_complaint_status
+- action_set_customer_service_status
+- action_set_promo_status
+- action_set_store_size
+- action_set_spent_full_day
+- action_set_too_much_walking
+- action_set_is_crowded
+- action_set_parking
+- action_default_ask_affirmation
+- action_set_delivery
+- action_set_assembly
+- action_set_product_price
+- action_set_product_design
+- action_set_product_quality
+forms:
+- nps_form
+- missing_product_form
+- food_form
+- product_form
+- store_location_form
