@@ -10,7 +10,7 @@ Przykład działania [chatbota](https://www.qans.pl/services/test-bot/). Przykł
 Wskazówki jak użyć [chatbota](https://www.qans.pl/services/) do identyfikacji czynników wpływających na NPS i do jego poprawy.
 
 <div align="center">
-<img align="center" src="./Demo/NPS-Bot.gif" alt="Chatbot">
+<img align="center" src="./demo/NPS-bot.gif" alt="Chatbot">
 </div>
 
 Dialog jest analizowany na bieżąco
@@ -19,9 +19,7 @@ Dialog jest analizowany na bieżąco
 <img align="center" src="./demo/arkusz.gif" alt="Chatbot">
 </div>
 
-<div align="center">
-<img align="center" src="./demo/NPS-Bot.gif" alt="Chatbot">
-</div>
+
 
 ### Instrukcja instalacji 
 Chatbot działa w oparciu o system [Rasa](https://github.com/RasaHQ/rasa).  
