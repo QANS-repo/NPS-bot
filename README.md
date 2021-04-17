@@ -10,7 +10,17 @@ Przykład działania [chatbota](https://www.qans.pl/services/test-bot/). Przykł
 Wskazówki jak użyć [chatbota](https://www.qans.pl/services/) do identyfikacji czynników wpływających na NPS i do jego poprawy.
 
 <div align="center">
-<img align="center" src="./NPS-Bot.gif" alt="demonstration">
+<img align="center" src="./Demo/NPS-Bot.gif" alt="Chatbot">
+</div>
+
+Dialog jest analizowany na bieżąco
+
+<div align="center">
+<img align="center" src="./demo/arkusz.gif" alt="Chatbot">
+</div>
+
+<div align="center">
+<img align="center" src="./demo/NPS-Bot.gif" alt="Chatbot">
 </div>
 
 ### Instrukcja instalacji 
