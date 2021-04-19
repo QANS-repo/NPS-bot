@@ -73,21 +73,26 @@ Jeśli używsz instalacji na serwerze w folderze actions znajduje się plik Dock
 Zaletą wykorzytania systemu Rasa jest to, że jest wiele materiałów dostępnych online. 
 Wyszukanie konkretnego błędu lub opisanie problemów doprowadzi Cię na forum lub do innego źródła gdzie znajdziesz rozwiązanie. 
 
-W kontekście NPS i tego systemu pracujemy nad dokładna instrukcją.
+W kontekście NPS i tego systemu pracujemy nad dokładną instrukcją.
 
 ### Czy planujemy przejście z wersji Rasa 1.0 na nowszą?
 Rasa rozwija się bardzo szybko. Jesienią 2020 gdy powstawł NPS bot to była najnowsza wersja Rasy.  
 W wersji Rasa 2.0 zmieniono format trenowania danych. 
-Planujemy uaktualnienie do nowszej wersji, ale poczekamy do wersji 3.
+Uaktualnienimy program do nowszej wersji, ale poczekamy do wersji 3.
 
 ### Klient chatbota osadzony na stronie internetowej 
-W naszym demo używamy klienta chatbota osadzonego na stronie internetowej. 
+W demo używamy klienta chatbota osadzonego na stronie internetowej. 
 Korzystamy z Botfront [Rasa-webchat](https://github.com/botfront/rasa-webchat)
 
 ### Jak zmodyfikować kod na potrzeby własnego badania
-W dużej mierze to jak trenowanie nowego bota. Potrzeba dialogów, aspektów i przykładowych odpowiedzi od użytkowników.
-Bezpłatne [szkolenie na Udemy](https://www.udemy.com/course/rasa-for-beginners/)
+W dużej mierze to jak trenowanie nowego bota. Potrzeba dialogów, aspektów i przykładowych odpowiedzi od użytkowników.  
+Więcej w dokumentacji Rasa. Jest też ich bezpłatne [szkolenie na Udemy](https://www.udemy.com/course/rasa-for-beginners/).
 
+### Jak zintegrować chatbota NPS z innymi kanałami - np. Facebook.
+Trzeba wykonać kroki standardowej procedura integracji [Rasy z FB](https://rasa.com/docs/rasa/connectors/facebook-messenger/)
+Przykład integracji chatbota NPS z [FB Messenger](https://m.me/qansbot)
+Interakcja z poziomu [naszej strony na FB](https://fb.me/qansbot).  
+Dane z tych interakcji są analizowane na żywo i dodawane do arkusza Google Sheet.
 
 Czatbot może być używany w następujących kanałach:
 - Facebook Messenger
