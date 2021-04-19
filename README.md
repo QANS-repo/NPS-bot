@@ -88,6 +88,11 @@ Korzystamy z Botfront [Rasa-webchat](https://github.com/botfront/rasa-webchat)
 W dużej mierze to jak trenowanie nowego bota. Potrzeba dialogów, aspektów i przykładowych odpowiedzi od użytkowników.  
 Więcej w dokumentacji Rasa. Jest też ich bezpłatne [szkolenie na Udemy](https://www.udemy.com/course/rasa-for-beginners/).
 
+### NPS Bot mnie nie rozumie albo robi błędy 
+Zobacz teksty na których był trenowany w pliku [nlu.md](data/nlu.md)
+Jeśli nie ma tam przykładu podobnego do tego co chcesz powiedzieć chatbot NPS raczej Cię nie zrozumie. 
+Możesz dopisać teksty do modelu języka i przetrenować model. 
+
 ### Jak zintegrować chatbota NPS z innymi kanałami - np. Facebook.
 Trzeba wykonać kroki standardowej procedura integracji [Rasy z FB](https://rasa.com/docs/rasa/connectors/facebook-messenger/)
 Przykład integracji chatbota NPS z [FB Messenger](https://m.me/qansbot)
