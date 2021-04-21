@@ -19,6 +19,8 @@ Dialog jest analizowany na bieżąco
 <img align="center" src="./demo/arkusz.gif" alt="Chatbot">
 </div>
 
+Wizualizacja danych za pomocą Google Sheet 
+
 
 
 ### Instrukcja instalacji 
@@ -73,10 +75,10 @@ Jeśli używsz instalacji na serwerze w folderze actions znajduje się plik Dock
 Zaletą wykorzytania systemu Rasa jest to, że jest wiele materiałów dostępnych online. 
 Wyszukanie konkretnego błędu lub opisanie problemów doprowadzi Cię na forum lub do innego źródła gdzie znajdziesz rozwiązanie. 
 
-W kontekście NPS i tego systemu pracujemy nad dokładną instrukcją.
+Dla NPS i tej implementacji pracujemy nad dokładną instrukcją.
 
 ### Czy planujemy przejście z wersji Rasa 1.0 na nowszą?
-Rasa rozwija się bardzo szybko. Jesienią 2020 gdy powstawł NPS bot to była najnowsza wersja Rasy.  
+Rasa rozwija się bardzo szybko. Jesienią 2020 gdy powstawł czatbot NPS to była najnowsza wersja Rasy.  
 W wersji Rasa 2.0 zmieniono format trenowania danych. 
 Uaktualnienimy program do nowszej wersji, ale poczekamy do wersji 3.
 
@@ -86,7 +88,7 @@ Korzystamy z Botfront [Rasa-webchat](https://github.com/botfront/rasa-webchat)
 
 ### Jak zmodyfikować kod na potrzeby własnego badania
 W dużej mierze to jak trenowanie nowego bota. Potrzeba dialogów, aspektów i przykładowych odpowiedzi od użytkowników.  
-Więcej w dokumentacji Rasa. Jest też ich bezpłatne [szkolenie na Udemy](https://www.udemy.com/course/rasa-for-beginners/).
+Więcej w dokumentacji Rasa oraz w [szkoleniu na Udemy](https://www.udemy.com/course/rasa-for-beginners/).
 
 ### NPS Bot mnie nie rozumie albo robi błędy 
 Zobacz teksty na których był trenowany w pliku [nlu.md](data/nlu.md)
@@ -94,7 +96,7 @@ Jeśli nie ma tam przykładu podobnego do tego co chcesz powiedzieć chatbot NPS
 Możesz dopisać teksty do modelu języka i przetrenować model. 
 
 ### Jak zintegrować chatbota NPS z innymi kanałami - np. Facebook.
-Trzeba wykonać kroki standardowej procedura integracji [Rasy z FB](https://rasa.com/docs/rasa/connectors/facebook-messenger/)
+Trzeba wykonać kroki standardowej procedury integracji [Rasy z FB](https://rasa.com/docs/rasa/connectors/facebook-messenger/)
 Przykład integracji chatbota NPS z [FB Messenger](https://m.me/qansbot)
 Interakcja z poziomu [naszej strony na FB](https://fb.me/qansbot).  
 Dane z tych interakcji są analizowane na żywo i dodawane do arkusza Google Sheet.
