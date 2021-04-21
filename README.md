@@ -22,7 +22,7 @@ Dialog jest analizowany na bieżąco
 Wizualizacja danych za pomocą Google Sheet  
 
 <div align="center">
-<img align="center" src="./demo/wykres.png" alt="Chatbot">
+<img align="center" src="./demo/wykres_NPS.png" alt="Chatbot">
 </div>
 
 
