@@ -7,19 +7,23 @@
 - W trakcie interakcji proponuje interwencję (poprawia NPS) poprzez usunięcie problemu zgłoszonego przez klienta.
 
 Przykład działania [chatbota](https://www.qans.pl/services/test-bot/). Przykładowe badanie i demonstracja jak wyniiki są generowane na żywo.   
-Wskazówki jak użyć [chatbota](https://www.qans.pl/services/) do identyfikacji czynników wpływających na NPS i do jego poprawy.
+Wskazówki jak użyć [chatbota](https://www.qans.pl/services/) do identyfikacji czynników wpływających na NPS i do jego poprawy.  
 
 <div align="center">
 <img align="center" src="./demo/NPS-bot.gif" alt="Chatbot">
 </div>
 
-Dialog jest analizowany na bieżąco
+Dialog jest analizowany na bieżąco  
 
 <div align="center">
 <img align="center" src="./demo/arkusz.gif" alt="Chatbot">
 </div>
 
-Wizualizacja danych za pomocą Google Sheet 
+Wizualizacja danych za pomocą Google Sheet  
+
+<div align="center">
+<img align="center" src="./demo/wykres.png" alt="Chatbot">
+</div>
 
 
 
